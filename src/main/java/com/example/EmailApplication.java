@@ -12,6 +12,9 @@ public class EmailApplication {
         AdvancedSpellChecker advancedSpellChecker1 = applicationContext.getBean("advancedSpellChecker",AdvancedSpellChecker.class);
        // BasicSpellChecker   basicSpellChecker1 = applicationContext.getBean("basicSpellChecker",BasicSpellChecker.class);
 
+        EmailClient emailClient = applicationContext.getBean("emailClient", EmailClient.class);
+        emailClient.sendEmail("Hei this is my first message !!!");
+
         System.out.println("*************************");
         System.out.println("***... beans usage ...***");
         System.out.println("*************************");
